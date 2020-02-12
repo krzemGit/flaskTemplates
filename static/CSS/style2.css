@@ -67,18 +67,18 @@ div.form-group {
     width: 300px;
 }
 
-input.green:focus {
+input.success:focus {
     box-shadow: 0 0 10px 5px #28a745;
 }
 
-input.red:focus {
+input.danger:focus {
     box-shadow: 0 0 10px 5px #dc3545;
 }
 
-input.yellow:focus {
+input.warning:focus {
     box-shadow: 0 0 10px 5px #ffc107;
 }
 
-input.navy:focus {
+input.info:focus {
     box-shadow: 0 0 10px 5px #17a2b8;
 }
