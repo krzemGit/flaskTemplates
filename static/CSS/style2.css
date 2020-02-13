@@ -29,9 +29,8 @@ a.nav-item {
 
 h2.title {
     color: white;
-    font-weight: bold;
     text-align: center;
-    margin: 40px auto;
+    margin: 50px auto;
 }
 
 div.table-wrapper {
@@ -43,7 +42,7 @@ div.table-wrapper {
 }
 
 .btn {
-    margin-top: 50px;
+    margin: 50px auto;
     border-width: 2px;
     padding: 10px;
     font-size: 1.2rem;
@@ -89,4 +88,30 @@ input.warning:focus {
 
 input.info:focus {
     box-shadow: 0 0 10px 5px #17a2b8;
+}
+
+/* RWD */
+
+@media (max-width: 400px) {
+    div.table-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    table {
+        max-width: 300px;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .btn-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    button.btn {
+        margin: 10px !important;
+    }
 }

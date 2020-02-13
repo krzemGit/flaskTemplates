@@ -27,15 +27,13 @@ a.nav-item {
 /* Table */
 
 div.table-wrapper {
-    margin: 50px auto;
     box-sizing: border-box;
 }
 
 h2.title {
     color: white;
-    font-weight: bold;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 50px auto;
 }
 
 table {
@@ -56,16 +54,6 @@ table td, table th.td {
 
 tr.item {
     border-top: 1px solid #dee2e6;
-}
-/* Alert */
-
-.alert-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.alert {
-    width: 100%;
 }
 
 /* Form */
@@ -128,7 +116,15 @@ div.form-group {
     box-shadow: transparent;
 }
 
+/* RWD */
+
 @media (max-width: 350px) {
+    
+    div.table-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     table {
         max-width: 300px;
     }

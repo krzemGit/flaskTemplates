@@ -10,7 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/CSS/style1.css">
+    <!-- {% block title %} -->
     <title>Flaks Templates</title>
+    <!-- {% endblock %} -->
   </head>
   <body>
     <section class="navbar">
@@ -21,18 +23,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.html" value="1">Option One<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="indexDark.html" value="2">Option Two</a>
-                <a class="nav-item nav-link" href="indexPresent.html" value="3">Option Three</a>
-                <a class="nav-item nav-link" href="#" value="4">Option Four - Cards</a>
+                <a class="nav-item nav-link active" href="index.html" value="1">Opcja Pierwsza<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="indexDark.html" value="2">Opcja Druga</a>
+                <a class="nav-item nav-link" href="indexPresent.html" value="3">Opcja Trzecia</a>
+                <a class="nav-item nav-link" href="indexCard.html" value="4">Opcja Czwarta - kartki</a>
             </div>
             </div>
         </nav>
     </section>
     <section class="display">
-        <!-- {% block content %}{% endblock %} -->
+        <!-- {% block content %} -->
         <div class="container">
-            <div class="table-wrapper">
+            <div class="table-wrapper d-flex flex-column">
                 <h2 class="title table-title text-center">Lista Prezentów</h2>
                 <table class="table table-borderless">
                     <thead>
@@ -44,12 +46,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <!--{% for item in items %}-->
                         <tr class="item">
                             <th scope="row" class="td">1</th>
                             <td>{{ item.name }}</td>
                             <td class="link">{{ item.url }}</td>
                             <td>{{ item.price }}</td>
                         </tr>
+                        <!-- {% endfor %} -->
                         <tr class="item">
                             <th scope="row" class="td">2</th>
                             <td>{{ item.name }}</td>
@@ -72,22 +76,23 @@
             </div>
             <div class="form-wrapper">
                 <h2 class="title form-title">Dodaj Prezent</h2>
-                <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="inputPresent" placeholder="Nazwa prezentu">
-                        </div>
-                        <div class="form-group">
-                            <input type="url" class="form-control" id="inputUrl" placeholder="Link">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" id="inputPrice" placeholder="Cena">
-                        </div>
-                        <div class="btn-wrapper">
-                            <button type="submit" class="btn">dodaj</button>
-                        </div>
-                    </form>
+                <form method="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputPresent" placeholder="Nazwa prezentu">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" class="form-control" id="inputUrl" placeholder="Link">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="inputPrice" placeholder="Cena">
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="submit" class="btn">dodaj</button>
+                    </div>
+                </form>
             </div>
         </div>
+        <!-- {% endblock %} -->
     </section>
 
 

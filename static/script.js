@@ -1,14 +1,14 @@
 // alert animation - fading
 $('div.alert').fadeOut(3000);
 
+// animations for colors in particular templates
 let docTilte = document.title;
 
-
+// color schemes for dark template
 if (docTilte == 'Flaks Templates - Dark') {
     let colorScheme = 0;
     let schemes = ['success', 'danger', 'warning', 'info'];
-    let formInputs = document.querySelectorAll('input')
-    let formButton = document.getElementById('form-submit-btn');
+    let formInputs = document.querySelectorAll('input');
     let colorButton = document.getElementById('color-scheme');
     colorButton.onclick = function(e) {
         e.preventDefault();
@@ -21,5 +21,21 @@ if (docTilte == 'Flaks Templates - Dark') {
         for (i=0; i < formInputs.length; i++) {
             formInputs[i].className = `form-control ${schemes[colorScheme]}` 
         }
+    }
+}
+
+// halo colors for present template in forms
+if (docTilte == 'Flaks Templates - Present') {
+    let inputs = document.querySelectorAll('input');
+    for (i=0; i < inputs.length; i++) {
+        inputs[i].addEventListener('focus', function() {
+            thisLabel = this.getAttribute('id');
+            console.log(thisLabel)
+            document.querySelector(`div.${thisLabel}`).classList.add('info');
+        })
+        inputs[i].addEventListener('blur', function() {
+            thisLabel = this.getAttribute('id');
+            document.querySelector(`div.${thisLabel}`).classList.remove('info');
+        })
     }
 }
