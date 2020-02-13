@@ -53,6 +53,14 @@ div.table-wrapper {
     border-radius: 40px;
 }
 
+button#form-submit-btn {
+    margin-right: 20px;
+}
+
+button#color-scheme {
+    margin-left: 20px;
+}
+
 
 /* Form */
 

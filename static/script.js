@@ -7,6 +7,7 @@ let docTilte = document.title;
 if (docTilte == 'Flaks Templates - Dark') {
     let colorScheme = 0;
     let schemes = ['success', 'danger', 'warning', 'info'];
+    let formInputs = document.querySelectorAll('input')
     let formButton = document.getElementById('form-submit-btn');
     let colorButton = document.getElementById('color-scheme');
     colorButton.onclick = function(e) {
@@ -16,20 +17,9 @@ if (docTilte == 'Flaks Templates - Dark') {
         } else {
             colorScheme = 0;
         };
-        console.log(colorScheme)
-        document.querySelector('tr#titles').className = `bg-${schemes[colorScheme]}`
+        document.querySelector('tr#titles').className = `bg-${schemes[colorScheme]}`;
+        for (i=0; i < formInputs.length; i++) {
+            formInputs[i].className = `form-control ${schemes[colorScheme]}` 
+        }
     }
 }
-
-// actions for navbar
-// let navItems = document.querySelectorAll('.nav-item')
-
-// for (i=0; i < navItems.length; i++) {
-//     navItems[i].onclick = function() {
-//         for (j=0; j < navItems.length; j++){
-//             navItems[j].classList.remove('active')
-//         };
-//         this.classList.add('active')
-//         console.log(`static/CSS/style${styleNo}.css`)
-//     }
-// }
