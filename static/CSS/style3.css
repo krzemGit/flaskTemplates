@@ -101,10 +101,11 @@ div.info {
     div.table-wrapper {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
     
     table {
-        max-width: 300px;
+        width: 100%;
     }
 
     div.form-group {
