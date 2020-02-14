@@ -70,9 +70,15 @@
                 </table>
             </div>
             <div class="alert-wrapper">
-                <div class="alert alert-primary text-center" role="alert">
-                    {{ Flask Message }}
-                </div>
+                <!-- {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for flask_message in messages %} -->
+                            <div class="alert alert-primary text-center" role="alert">
+                                {{ Flask Message }}
+                            </div>
+                        <!-- {% endfor %}
+                    {% endif %}
+                {% endwith %} -->
             </div>
             <div class="form-wrapper">
                 <h2 class="title form-title">Dodaj Prezent</h2>
