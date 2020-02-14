@@ -2,10 +2,10 @@
 $('div.alert').fadeOut(3000);
 
 // animations for colors in particular templates
-let docTilte = document.title;
+let docTilte = document.title; 
 
 // color schemes for dark template
-if (docTilte == 'Flaks Templates - Dark') {
+if (docTilte == 'Flask Templates - Dark') {
     let colorScheme = 0;
     let schemes = ['success', 'danger', 'warning', 'info'];
     let formInputs = document.querySelectorAll('input');
@@ -25,7 +25,7 @@ if (docTilte == 'Flaks Templates - Dark') {
 }
 
 // halo colors for present template in forms
-if (docTilte == 'Flaks Templates - Present') {
+if (docTilte == 'Flask Templates - Present') {
     let inputs = document.querySelectorAll('input');
     for (i=0; i < inputs.length; i++) {
         inputs[i].addEventListener('focus', function() {
